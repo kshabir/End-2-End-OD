@@ -59,6 +59,7 @@ class DataValidation:
             logging.info(f"Data validation artifact: {data_validation_artifact}")
 
             if status:
+                # This command places file/zip (which can be used in next steps) in the current working directory 
                 shutil.copy(self.data_ingestion_artifact.data_zip_file_path, os.getcwd())
 
             return data_validation_artifact
